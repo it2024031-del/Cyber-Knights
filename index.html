@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberKnight — Tic Tac Toe</title>
+  <meta name="description" content="CyberKnight Tic Tac Toe — Human vs Human, Human vs AI, and Online 2-Player. Created by SUBHADIP JANA." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>♞</text></svg>">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>CyberKnight<span class="accent">_TicTacToe</span></h1>
+    <p class="subtitle">Created by <strong>SUBHADIP JANA</strong></p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="controls">
+        <label class="mode">
+          <span>Mode:</span>
+          <select id="mode">
+            <option value="ai">Human vs AI</option>
+            <option value="human">Human vs Human</option>
+            <option value="online">Online 2-Player</option>
+          </select>
+        </label>
+        <div id="onlineControls" class="online-controls hidden">
+          <button id="createRoom" class="btn">Create Room</button>
+          <input id="roomCode" class="field" placeholder="Room Code" aria-label="Room Code" />
+          <button id="joinRoom" class="btn">Join</button>
+          <span id="youAre" class="badge"></span>
+        </div>
+        <button id="reset" class="btn">Reset</button>
+      </div>
+
+      <div id="status" class="status">X to move</div>
+
+      <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board">
+        <!-- Cells injected by JS -->
+      </div>
+
+      <div class="legend">
+        <div class="pill x">X</div>
+        <div class="pill o">O</div>
+        <div class="spacer"></div>
+        <div class="score">
+          <span>X: <strong id="scoreX">0</strong></span>
+          <span>O: <strong id="scoreO">0</strong></span>
+          <span>Ties: <strong id="scoreT">0</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel tips">
+      <h2>How to play</h2>
+      <ul>
+        <li>Pick a mode: play a friend, battle the AI, or go Online (create a room or join with a code).</li>
+        <li>X always starts. Only the current player can move in Online mode.</li>
+        <li>Use <em>Reset</em> to start a new round.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year"></span> CyberKnight • Built with HTML/CSS/JS • Creator: <strong>SUBHADIP JANA</strong></span>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

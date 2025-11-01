@@ -1,0 +1,16 @@
+{
+  "name": "cyberknight-tictactoe-online",
+  "version": "1.0.0",
+  "description": "CyberKnight \u2014 Tic Tac Toe (HTML/CSS/JS) with Human vs Human, Human vs AI, and Online 2-Player via Socket.IO. Created by SUBHADIP JANA.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "SUBHADIP JANA",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
